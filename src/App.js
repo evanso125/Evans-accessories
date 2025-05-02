@@ -1,30 +1,32 @@
-
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import SignUp from "./Component/SignUp"
-import SignIn from './Component/SignIn';
-import AddProducts from './Component/AddProducts';
-import GetPrtoducts from './Component/GetProducts';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
+import AddProducts from './components/AddProducts';
+import GetProducts from './components/GetProducts';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js'
+import SingleProduct from './components/SingleProduct';
+import Carousel from './components/Carousel';
+
 function App() {
+
   return (
     <Router>
-
-    <div className="App">
-      <header className='App-header'>
-        <h1>Great Phone Accessories Stores</h1>
+      <div className="App">
         
-      </header>
-      <Routes>
-        <Route path='/signup'element={<SignUp/>} />
-        <Route path='/signin' element={<SignIn/>}/>
-        <Route path='/addproduct' element={<AddProducts/>}/>
-        <Route path='/' element={<GetPrtoducts/>} />
-      </Routes>
-      
-      
-    </div>
+        
+        <Routes>
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/SignIn" element={<SignIn />} />
+          <Route path="/AddProducts" element={<AddProducts />} />
+          <Route path="/" element={<GetProducts />} />
+          <Route path="/singleproduct" element={<SingleProduct />} />
+          <Route path="/carousel" element={<Carousel />} />
+
+        </Routes>
+        
+      </div>
     </Router>
   );
 }
