@@ -18,6 +18,9 @@ const Carousel = () => {
                         <div className="carousel-item">
                             <img src="slide2.jpeg" alt="" className="d-block w-100"/>
                         </div>
+                        <div className="carousel-item">
+                            <img src="image4.jpeg" alt="" className="d-block w-100"/> 
+                        </div>
                     </div>
 
                     <Link to="#mycarousel" className="carousel-control-prev" data-bs-slide="prev">

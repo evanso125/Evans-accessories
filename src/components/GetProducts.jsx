@@ -46,7 +46,8 @@ const GetProducts = () => {
                 <Link className="btn btn-dark mx-2" to="/signin">SignIn</Link>
                 <Link className="btn btn-dark mx-2" to="/signup">Signup</Link>
                 <Link className="btn btn-dark mx-2" to="/addproducts">Add Products</Link>
-                <Link className="btn btn-dark mx-2" to="/">Get Products</Link>
+                
+                <Link className="btn btn-primary mx-2" to="/singleproduct">Singleproduct</Link>
             </nav>
 
             {/* No products message */}

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SingleProduct = () => {
     const [phone, setPhone] = useState("");
@@ -80,6 +81,9 @@ const SingleProduct = () => {
                             Pay now
                         </button>
                     </form>
+                    <Link to="/getproducts" className="btn btn-dark mt-2">
+                        Back to Products
+                    </Link>
                 </div>
             </div>
           
