@@ -22,18 +22,22 @@ const Footer = () => {
                     <h4 className="text-center">Stay connected</h4>
                     <br/>
                     <a href="https://facebook.com">
-                        <img src="image/pictures/fb.png" width="30px" alt=""/>
+                       <img src="public/facebook.png" width="30px" alt="" />
                     </a>
                     <a href="https://instagram.com">
-                        <img src="image/pictures/in.png" width="30px" alt=""/>
+                       <img src="path/to/instagram.jpeg" width="30px" alt=""/>
                     </a>
-                    <p className="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempora voluptatibus, vel dolore dolorem totam temporibus. Illo repellat facere provident?</p>
+                    <a href="https://twitter.com>">
+                          <img src="path/to/twitter.png" width="30px" alt=""/>
+                    </a>
+                    <p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempora voluptatibus, vel dolore dolorem totam temporibus. Illo repellat facere provident?</p>
     
                 </div>
               </section>
               {/* <!-- end of footer --> */}
                <footer className="text-white bg-dark text-center p-2">
                 <h5>Developed by Evans Mwangi&copy;2025. All rights reserved</h5>
+                
                </footer>
             </div>
      );

@@ -7,7 +7,7 @@ const AddProducts = () =>{
     let [product_desc, setProductDesc] = useState("");
     let [product_cost, setProductCost] = useState("");
     let [product_photo, setProductPhoto] = useState("");
-
+    let [product_category, setProductCategory] = useState("");
     let [loading, setLoading] = useState("");
     let [success, setSuccess] = useState("");
     let [error, setError] = useState("");
@@ -40,8 +40,9 @@ const AddProducts = () =>{
             data.append("product_desc", product_desc);
             data.append("product_cost", product_cost);
             data.append("product_photo", product_photo);
+            data.append("product_category", product_category);
 
-            const response = await axios.post("https://johntirike.pythonanywhere.com/api/addproduct", data);
+            const response = await axios.post("https://ndege25.pythonanywhere.com/api/addproduct", data);
             setLoading("");
             setSuccess(response.data.success);
             setProductCost("");
@@ -63,7 +64,7 @@ const AddProducts = () =>{
                 <Link className="btn btn-dark mx-2" to="/signin">SignIn</Link>
                 <Link className="btn btn-dark mx-2" to="/signup">Signup</Link>
                 <Link className="btn btn-dark mx-2" to="/addproducts">Add Products</Link>
-                <Link className="btn btn-dark mx-2" to="/">Get Products</Link>
+                <Link className="btn btn-dark mx-2" to="/getproducts">Get Products</Link>
             </nav>
             <div className="col-md-6 card shadow p-4">
 
@@ -86,6 +87,21 @@ const AddProducts = () =>{
                     <label className="form-label" onChange={(e) => setProductPhoto(e.target.files)}>Product Photo</label>
 
                     <input type="file" className="form-control" required onChange={(e) => setProductPhoto(e.target.files[0])}/><br />
+                    <label htmlFor="category" className="form-label">Choose a category:</label>
+                <select
+                    id="category"
+                    value={product_category}
+                    className="form-control"
+                    required
+                    onChange={(e) => setProductCategory(e.target.value)}
+                >
+                    <option value="">--Select Category--</option>
+                    <option value="cases">Cases</option>
+                    <option value="chargers">Chargers</option>
+                    <option value="earohones">Earphones</option>
+                    <option value="mystery">Cables</option>
+                    
+                </select>
 
                     <button className="btn btn-primary">Add Product</button>
                 </form>

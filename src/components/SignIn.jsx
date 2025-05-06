@@ -18,7 +18,7 @@ const SignIn = () => {
         const data = new FormData();
         data.append("username", username);
         data.append("password", password);
-        const response = await axios.post("https://alvins.pythonanywhere.com/api/signin", data);
+        const response = await axios.post("https://ndege25.pythonanywhere.com/api/signin", data);
         if (response.data.user){
             localStorage.setItem("user", JSON.stringify(response.data.user));
             navigate("/");

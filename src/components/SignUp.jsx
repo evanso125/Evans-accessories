@@ -24,7 +24,7 @@ const SignUp = () =>{
         data.append("phone", phone);
         data.append("password", password);
 
-        const response = await axios.post("https://alvins.pythonanywhere.com/api/signup",data)
+        const response = await axios.post("https://ndege25.pythonanywhere.com/api/signup",data)
 
         setloading("")
         setsuccess(response.data.success)

@@ -81,7 +81,7 @@ const SingleProduct = () => {
                             Pay now
                         </button>
                     </form>
-                    <Link to="/getproducts" className="btn btn-dark mt-2">
+                    <Link to="/" className="btn btn-dark mt-2">
                         Back to Products
                     </Link>
                 </div>

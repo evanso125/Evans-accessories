@@ -8,6 +8,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js'
 import SingleProduct from './components/SingleProduct';
 import Carousel from './components/Carousel';
+import Cases from './components/Cases';
+import Footer from './components/Footer';
+import NavBar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import ShopNow  from './components/ShopNow';
 
 function App() {
 
@@ -20,9 +25,17 @@ function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/SignIn" element={<SignIn />} />
           <Route path="/AddProducts" element={<AddProducts />} />
-          <Route path="/" element={<GetProducts />} />
+          <Route path="/getproducts" element={<GetProducts />} />
           <Route path="/singleproduct" element={<SingleProduct />} />
           <Route path="/carousel" element={<Carousel />} />
+          <Route path="/category/cases" element={<Cases />} />
+          <Route path="/category/chargers" element={<Cases />} />
+          <Route path="/category/earphones" element={<Cases />} />
+          <Route path="/category/cables" element={<Cases />} />
+          <Route path="/category/others" element={<Cases />} />
+          <Route path='/navbar' element={<NavBar />} />
+          <Route path='/' element={<ShopNow />} />
+          <Route path='/hero' element={<HeroSection />} />
 
         </Routes>
         
